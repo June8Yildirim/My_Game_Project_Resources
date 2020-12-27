@@ -19,7 +19,9 @@ public class Hangman {
         ArrayList<Character> list = new ArrayList<>();
         while (f < word.length()) {
             filler[f] = '-';
-            if (word.charAt(f) == ' ') filler[f] = ' ';
+            if (word.charAt(f) == ' '){
+                filler[f] = ' ';
+            }
             f++;
         }
 
