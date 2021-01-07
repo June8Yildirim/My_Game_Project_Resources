@@ -1,4 +1,6 @@
-package HotelRoomBooking;
+package Oblong;
+
+import Oblong.Oblong;
 
 public class ExtendedOblong extends Oblong {
     private char symbol;

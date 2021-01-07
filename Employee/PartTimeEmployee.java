@@ -18,6 +18,7 @@ public class PartTimeEmployee extends Employee {
     public double calculateWeeklyPay(int hours){
         return this.hourlyPay*hours;
     }
+
     @Override
     public String getStatus()
     {

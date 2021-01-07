@@ -1,5 +1,7 @@
 package HotelRoomBooking;
 
+import Oblong.Oblong;
+
 import java.util.ArrayList;
 
 public class Apartment {

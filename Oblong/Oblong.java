@@ -1,4 +1,4 @@
-package HotelRoomBooking;
+package Oblong;
 
 public class Oblong {
 

@@ -6,11 +6,12 @@ public class BankAccount {
     protected double balance;
     private double interestRate;
 
-    public BankAccount(){
-        this.accountNumber="999";
-        this.accountName="John Doe";
-        this.balance=0;
+    public BankAccount() {
+        this.accountNumber = "999";
+        this.accountName = "John Doe";
+        this.balance = 0;
     }
+
     public BankAccount(String accountNumber, String accountName) {
         this.accountNumber = accountNumber;
         this.accountName = accountName;
@@ -50,6 +51,10 @@ public class BankAccount {
             System.out.println("main method is called");
             return false;
         }
+    }
+
+    public String toString() {
+        return "Name: " + accountName + "\n" + "Account Number: " + accountNumber + "\n" + "Balance: " + balance;
     }
 
     public void addInterest() {

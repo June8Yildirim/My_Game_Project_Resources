@@ -1,12 +1,13 @@
 package HotelRoomBooking;
 
 public class Timetable {
-//    private  Booking times =new Booking(); //[][];
+    private Booking[][] times;
 //
 //    public Timetable(int day, int period) {
-//         Booking[][] times = new Booking[day][period];
+//
+//
 //    }
-//    public boolean makeBooking(int day, int period, Booking[][]){
+//    public boolean makeBooking(int day, int period, Booking[][] bookings){
 //
 //    }
 //

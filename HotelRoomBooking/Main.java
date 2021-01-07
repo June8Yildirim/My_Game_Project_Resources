@@ -1,5 +1,7 @@
 package HotelRoomBooking;
 
+import Oblong.ExtendedOblong;
+
 public class Main {
     public static void main(String[]args){
         ExtendedOblong ob =new ExtendedOblong(10.2,5.4,'#');

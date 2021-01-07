@@ -23,14 +23,6 @@ public class Places {
         return name;
     }
 
-    public Items getItemList() {
-        return holds;
-    }
-
-    public placeOfMiddleEarth[] getConnecting() {
-        return connecting;
-    }
-
     public String getPlaceDescription() {
         return description;
     }
@@ -39,16 +31,18 @@ public class Places {
         return connecting;
     }
 
+    public placeOfMiddleEarth getPlaceType() {
+        return type;
+    }
+
+    public Items getItemList() {return holds;}
+
     public void removeItemFromPlace(Items.Item itemToRemove) {
         holds.removeItem(itemToRemove);
     }
 
     public void addItemToPlace(Items.Item itemToAdd) {
         holds.addItem(itemToAdd);
-    }
-
-    public placeOfMiddleEarth getPlaceType() {
-        return type;
     }
 
 
