@@ -1,27 +1,29 @@
 package LordOfTheRingsGame.Villains;
 
 public class VilliansSpecialities {
-    public enum VillainNameEnums {ANGMAR, GOBLIN, GOLLUM, NAZGUL, ORCH, SARUMAN, SAURON, URUKHAI};
-    private VillainNameEnums type;
+//    public enum VillainNameEnums {ANGMAR, GOBLIN, GOLLUM, NAZGUL, ORCH, SARUMAN, SAURON, URUKHAI}
     private String VillainName;
-    private int VillainHp;
     private int VillainDamage;
+    private int VillainPower;
     private int VillainLevel;
 
-    public VilliansSpecialities(VillainNameEnums type) {
-        this.VillainName = villainNameSetUp(type);
-        this.VillainHp = villainHpSetUp(type);
-        this.VillainDamage = villainDamageSetUp(type);
-        this.VillainLevel = villainLevelSetUp(type);
-        this.type=type;
+
+
+    public VilliansSpecialities(String aVillainName, int aVillainPower, int aVillainDamage, int aVillainLevel) {
+        this.VillainName = aVillainName;
+        this.VillainDamage = aVillainDamage;
+        this.VillainPower= aVillainPower;
+        this.VillainLevel = aVillainLevel;
     }
 
+    public VilliansSpecialities( ) {
+        this.VillainName = VillainName;
+        this.VillainDamage = VillainDamage;
+        this.VillainPower= VillainPower;
+        this.VillainLevel = VillainLevel;
+    }
     public String getVillainName() {
         return VillainName;
-    }
-
-    public int getVillainHp() {
-        return VillainHp;
     }
 
     public int getVillainDamage() {
@@ -32,34 +34,21 @@ public class VilliansSpecialities {
         return VillainLevel;
     }
 
-    public String villainNameSetUp(VillainNameEnums type) {
-        String tempName="";
-        switch (type){
-            case GOLLUM -> tempName="Gollum";
-            case ORCH -> tempName="Orch";
-            case GOBLIN -> tempName="Goblin";
-            case NAZGUL -> tempName="Nazgul";
-            case URUKHAI -> tempName="Urukhai";
-            case SARUMAN -> tempName="Saruman";
-
-        }
-        return tempName;
+    public void setVillainDamage(int villainDamage) {
+        VillainDamage = villainDamage;
     }
 
-
-
-
-
-    public String toString() {
-        return "VilliansSpecialities{" +
-                "VillainName='" + VillainName + '\'' +
-                ", VillainHp=" + VillainHp +
-                ", VillainDamage=" + VillainDamage +
-                ", VillainLevel=" + VillainLevel +
-                '}';
+    public int getVillainPower() {
+        return VillainPower;
     }
 
-    public String getVillainDescription(String nameOfVillain) {
+    public void setVillainPower(int aVillainPower) {
+        VillainPower = aVillainPower;
+    }
+
+    public void setVillainLevel(int aVillainLevel) {VillainLevel = aVillainLevel; }
+
+    public  String getVillainDescription(String nameOfVillain) {
         String descriptionOfVillain = "";
         if ("goblin".equals(nameOfVillain)) {
             descriptionOfVillain="Goblin :";

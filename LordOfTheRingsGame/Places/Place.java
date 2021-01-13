@@ -4,7 +4,7 @@ import LordOfTheRingsGame.Weapon.Weapon;
 
 public class Place {
     //How can I access when I made a private.
-    public enum placeOfMiddleEarthEnums {MORIA_BRIDGE, HELMS_DEEP, MINASTRITH, ISENGARD, SHIRE}
+    public enum placeOfMiddleEarthEnums {MORIA_BRIDGE, HELMS_DEEP, MINASTRITH, ISENGARD, SHIRE, CARADRAS_PASSAGEWAY}
 
     private Weapon.WEAPONS[] weapons;
     private Weapon holdingWeapon;
@@ -111,6 +111,8 @@ public class Place {
             case MINASTRITH:
                 tempPlace = new placeOfMiddleEarthEnums[]{placeOfMiddleEarthEnums.HELMS_DEEP};
                 break;
+            case CARADRAS_PASSAGEWAY:
+                tempPlace = new placeOfMiddleEarthEnums[]{placeOfMiddleEarthEnums.SHIRE, placeOfMiddleEarthEnums.MORIA_BRIDGE};
         }
 
         return tempPlace;

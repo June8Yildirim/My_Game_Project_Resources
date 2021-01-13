@@ -1,27 +1,26 @@
 package LordOfTheRingsGame.Weapon;
 
 public class WeaponSpecialities {
-    private String name;
-    private double damage;
+    private String weaponName;
+    private int weaponDamage;
 
-    public WeaponSpecialities(String name, double damage) {
-        this.name = name;
-        this.damage = damage;
+    public WeaponSpecialities(String aWeaponName, int aWeaponDamage) {
+        this.weaponName = aWeaponName;
+        this.weaponDamage = aWeaponDamage;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getWeaponName() {
+        return weaponName;
     }
 
-    public void setDamage(double damage) {
-        this.damage = damage;
+    public int getWeaponDamage() {
+        return weaponDamage;
     }
-
 
     public String toString() {
         return "WeaponSpecialities{" +
-                "name='" + name + '\'' +
-                ", damage=" + damage +
+                "name='" + weaponName + '\'' +
+                ", damage=" + weaponDamage +
                 '}';
     }
 }

@@ -1,50 +1,75 @@
 package LordOfTheRingsGame.Villains;
 
-import java.util.ArrayList;
-
 public class Villain {
+    public static VilliansSpecialities villainList;
 
-//    private ArrayList<VILLAINS> VillainsList = new ArrayList<>();
-
-    public static Villain setVillains(String name) {
-
-        switch (name){
+    public void setVillains(String name) {
+        switch (name) {
             case "angmar":
-                VilliansSpecialities angmar =new VilliansSpecialities("angmar",100,50,1);
+                villainList = new VilliansSpecialities("Angmar", 110, 30, 1);
                 break;
             case "goblin":
-                VilliansSpecialities goblin  =new VilliansSpecialities("goblin",100,50,1);
+                villainList = new VilliansSpecialities("Goblin", 50, 12, 1);
                 break;
             case "gollum":
-                VilliansSpecialities gollum  =new VilliansSpecialities("gollum",100,50,1);
+                villainList = new VilliansSpecialities("Gollum", 60, 7, 1);
                 break;
             case "nazgul":
-                VilliansSpecialities nazgul =new VilliansSpecialities("nazgul",100,50,1);
+                villainList = new VilliansSpecialities("Nazgul", 100, 40, 1);
                 break;
             case "orch":
-                VilliansSpecialities orch =new VilliansSpecialities("orch",100,50,1);
+                villainList = new VilliansSpecialities("Orch", 30, 9, 1);
                 break;
             case "sauron":
-                VilliansSpecialities sauron =new VilliansSpecialities("sauron",100,50,1);
+                villainList = new VilliansSpecialities("Sauron", 120, 50, 1);
                 break;
             case "saruman":
-                VilliansSpecialities saruman  =new VilliansSpecialities("saruman",100,50,1);
+                villainList = new VilliansSpecialities("Saruman", 110, 35, 1);
                 break;
             case "urukhai":
-                VilliansSpecialities urukhai =new VilliansSpecialities("urukhai",100,50,1);
+                villainList = new VilliansSpecialities("Urukhai", 80, 15, 1);
                 break;
         }
-//        ArrayList<VilliansSpecialities> villiansSpecialities = new ArrayList<>();
-//        villiansSpecialities.add(new VilliansSpecialities("angmar",100,50,1));
-//        villiansSpecialities.add(new VilliansSpecialities("goblin",100,50,1));
-//        villiansSpecialities.add(new VilliansSpecialities("gollum",100,50,1));
-//        villiansSpecialities.add(new VilliansSpecialities("nazgul",100,50,1));
-//        villiansSpecialities.add(new VilliansSpecialities("orch",100,50,1));
-//        villiansSpecialities.add(new VilliansSpecialities("saruman",100,50,1));
-//        villiansSpecialities.add(new VilliansSpecialities("sauron",100,50,1));
-//        villiansSpecialities.add(new VilliansSpecialities("urukhai",100,50,1));
+        System.out.println("A villain appear in front of you, and name is " + name);
+    }
 
+    public String getVillainNameString() {
+        return villainList.getVillainName();
+    }
+    public  void getVillainName() { System.out.println("Your villain's name is " + villainList.getVillainName());}
+    public int getVillainDamageInt() {
+        return villainList.getVillainDamage();
+    }
+    public int getVillainLevelInt() {
+        return villainList.getVillainLevel();
+    }
+    public int getVillainPower() {
+        return villainList.getVillainPower();
+    }
+    public void setVillainPower(int newPower) { villainList.setVillainPower(newPower); }
 
+    public static String VillainDescription(String playerName) {
+        String descriptionOfVillains = "";
+        if ("Aragorn".equals(playerName)) {
+            descriptionOfVillains = "Aragorn :";
+        } else if ("Legolas".equals(playerName)) {
+            descriptionOfVillains = "Legolas :";
+        } else if ("Frodo".equals(playerName)) {
+            descriptionOfVillains = "Frodo :";
+        } else if ("Gandlalf".equals(playerName)) {
+            descriptionOfVillains = "Gandalf: ";
+        } else if ("Gimli".equals(playerName)) {
+            descriptionOfVillains = "Gimli :";
+        }
+        return descriptionOfVillains;
+    }
+
+    public String villainInfo() {
+        return "Villians Specialities\n" +
+                "Villain Name= " + villainList.getVillainName() + "\n" +
+                "Villain Power= " + villainList.getVillainPower() + "\n" +
+                "Villain Damage= " + villainList.getVillainDamage() + "\n" +
+                "Villain Level= " + villainList.getVillainLevel();
     }
 
 }

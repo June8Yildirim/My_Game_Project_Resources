@@ -12,7 +12,7 @@ public class Game {
     Places Rohan = new Places(Places.placeOfMiddleEarth.ROHAN);
     Places Minas_Trith = new Places(Places.placeOfMiddleEarth.MINASTRITH);
     Places Shire = new Places(Places.placeOfMiddleEarth.SHIRE);
-    Places currentPlace;
+    public static Places currentPlace;
 
     Player player;
 
@@ -51,7 +51,7 @@ public class Game {
                     System.out.println();
                     break;
                 case 's':
-                    System.out.println("You are currently at "+currentPlace.getPlaceName());
+                    System.out.println("You are currently at " + currentPlace.getPlaceName());
                 case 'q':
                     break;
                 default:
@@ -81,19 +81,34 @@ public class Game {
         }
     }
 
-    public void move() {
+    public Places move() {
         for (int i = 0; i < currentPlace.getPlaceConnections().length; i++) {
             System.out.println(i + 1 + ". " + currentPlace.getPlaceConnections()[i]);
+            System.out.println(currentPlace.getPlaceConnections()[i]);
         }
         System.out.println("Enter place number to move to, or enter 0 to exit");
         int PlaceToMoveTo = sc.nextInt() - 1;
         if (PlaceToMoveTo != -1) {
             Places.placeOfMiddleEarth type = currentPlace.getPlaceType();
+            System.out.println(type);
             switch (type) {
-                case CARADRAS_PASSAGEWAY:
-                    Caradras_Passageway = currentPlace;
+                case SHIRE:
+                    Shire = currentPlace;
                     currentPlace = Moria_Bridge;
                     System.out.println(currentPlace.getPlaceDescription());
+                    break;
+                case CARADRAS_PASSAGEWAY:
+                    if (currentPlace.getPlaceConnections()[PlaceToMoveTo] == Places.placeOfMiddleEarth.SHIRE) {
+                        Caradras_Passageway = currentPlace;
+                        currentPlace = Shire;
+                        System.out.println(currentPlace.getPlaceDescription());
+                    } else {
+                        if (currentPlace.getPlaceConnections()[PlaceToMoveTo] == Places.placeOfMiddleEarth.MORIA_BRIDGE) {
+                            Caradras_Passageway = currentPlace;
+                            currentPlace = Shire;
+                            System.out.println(currentPlace.getPlaceDescription());
+                        }
+                    }
                     break;
                 case MORIA_BRIDGE:
                     Moria_Bridge = currentPlace;
@@ -142,11 +157,13 @@ public class Game {
                     currentPlace = Rohan;
                     System.out.println(currentPlace.getPlaceDescription());
                     break;
+                default:
+                    System.out.println("There is no place ");
             }
         } else {
             System.out.println("there no place");
         }
-
+        return currentPlace;
     }
 
     public void showInventory() {
@@ -223,7 +240,7 @@ public class Game {
         System.out.println("Enter player age.");
         age = sc.nextInt();
 
-       player = new Player(name, age);
+        player = new Player(name, age);
     }
 
     public void showStory() {

@@ -1,43 +1,31 @@
 package LordOfTheRingsGame.Heros;
 
-import LordOfTheRingsGame.Weapon.Weapon;
-
 public class HerosSpecialities{
-
-
-    private String playerName;
-    private int hp;
-    private int maxHp;
+    private String heroName;
+    private int makeDamage;
     private int power;
     private int maxPower;
     private int level;
-    public HerosSpecialities(String playerName, int hp, int maxHp, int power, int maxPower, int level) {
-        this.playerName = playerName;
-        this.hp = hp;
-        this.maxHp = maxHp;
-        this.power = power;
-        this.maxPower = maxPower;
-        this.level = level;
-    }
-    public HerosSpecialities(){
-        this.playerName = playerName;
-        this.hp = hp;
-        this.maxHp = maxHp;
-        this.power = power;
-        this.maxPower = maxPower;
-        this.level = level;
-    }
-    public String getPlayerName() {
-        return playerName;
+
+
+    public HerosSpecialities(String aHeroName, int aMmakeDamage, int aPower, int aLevel) {
+        this.heroName = aHeroName;
+        this.makeDamage=aMmakeDamage;
+        this.power = aPower;
+        this.maxPower = (aPower+20);
+        this.level = aLevel;
     }
 
-    public int getHp() {
-        return hp;
+    public HerosSpecialities( ) {
+        this.heroName = heroName;
+        this.makeDamage=makeDamage;
+        this.power = power;
+        this.maxPower = (power+20);
+        this.level = level;
     }
+    public String getHeroName() { return heroName; }
 
-    public int getMaxHp() {
-        return hp+10;
-    }
+    public int getMakeDamage() { return makeDamage; }
 
     public int getPower() {
         return power;
@@ -51,32 +39,8 @@ public class HerosSpecialities{
         return level;
     }
 
+    public void setPower(int power) { this.power = power; }
 
-    public String toString() {
-        return "HerosSpecialities{" +
-                "playerName='" + playerName + '\'' +
-                ", hp=" + hp +
-                ", maxHp=" + maxHp +
-                ", power=" + power +
-                ", maxPower=" + maxPower +
-                ", level=" + level +
-                "} " + super.toString();
-    }
+    public void setLevel(int level) {this.level = level; }
 
-    public static String heroDescription(String playerName) {
-
-        String descriptionOfHeros = "";
-        if ("aragorn".equals(playerName)) {
-            descriptionOfHeros = "Aragorn :";
-        } else if ("legolas".equals(playerName)) {
-            descriptionOfHeros = "Legolas :";
-        } else if ("frodo".equals(playerName)) {
-            descriptionOfHeros = "Frodo :";
-        } else if ("gandlalf".equals(playerName)) {
-            descriptionOfHeros = "Gandalf: ";
-        } else if ("gimli".equals(playerName)) {
-            descriptionOfHeros = "Gimli :";
-        }
-        return descriptionOfHeros;
-    }
 }
