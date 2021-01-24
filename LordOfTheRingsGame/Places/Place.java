@@ -53,13 +53,9 @@ public class Place {
         return type;
     }
 
-    public Weapon getWeaponList() {
-        return holdingWeapon;
-    }
+    public Weapon getWeaponList() {     return holdingWeapon;  }
 
-    public void addWeaponToPlace(Weapon.WEAPONS weaponToAdd) {
-        holdingWeapon.addWeapon(weaponToAdd);
-    }
+    public void addWeaponToPlace(Weapon.WEAPONS weaponToAdd) {     holdingWeapon.addWeapon(weaponToAdd);    }
 
     public void removeWeaponFromPlace(Weapon.WEAPONS weaponToRemove) {
         holdingWeapon.removeWeapon(weaponToRemove);

@@ -29,7 +29,7 @@ public class Board {
 
     /**
      * Initialize the fields.
-     * @param numPlayers The number of players.
+     * @param players The number of players.
      */
     public Board(List<Player> players){
 

@@ -1,24 +1,18 @@
 package TextBasedGameAttempt2;
 
 public class PlayerSpec {
-    enum playerSpecEnums {ARAGORN, GIMLI, LEGOLAS, FRODO, GANDALF}
 
     private String name;
     private int xp;
     private int damage;
-    private playerSpecEnums type;
 
-
-
-//
-//    public PlayerSpec(playerSpecEnums type) {
-//        this.name =name;
-//        this.xp = xp;
-//        this.damage = damage;
-//        this.type = type;
-//    }
 
     public PlayerSpec(String name, int xp, int damage) {
+        this.name = name;
+        this.xp = xp;
+        this.damage = damage;
+    }
+    public PlayerSpec(){
         this.name = name;
         this.xp = xp;
         this.damage = damage;

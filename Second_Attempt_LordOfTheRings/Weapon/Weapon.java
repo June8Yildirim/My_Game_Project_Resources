@@ -1,18 +1,20 @@
-package LordOfTheRingsGame.Weapon;
+
+package Second_Attempt_LordOfTheRings.Weapon;
+
 
 import java.util.ArrayList;
 
 public class Weapon {
-    public enum  WEAPONS {DWARFAXES, ELFBOW, GLAMDRING, KNIFE, NARSIL, ORCHRIST, STING}
+    public enum weaponEnums {DWARFAXES, ELFBOW, GLAMDRING, KNIFE, NARSIL, ORCHRIST, STING}
 
     public static WeaponSpecialities weaponSpecialities;
-
 
     public Weapon() {
 
     }
 
-    private ArrayList<Weapon.WEAPONS> Holding = new ArrayList<>();
+    private ArrayList<weaponEnums> Holding = new ArrayList<weaponEnums>();
+//    private ArrayList<LordOfTheRingsAttempt2tempt2.Weapon.weaponEnums> Holding = new ArrayList<LordOfTheRingsAttempt2.Weapon.weaponEnums>();
 
     public void setWeapon(String name) {
         switch (name) {
@@ -40,11 +42,11 @@ public class Weapon {
         }
     }
 
-    public void addWeapon(Weapon.WEAPONS weapon) {
+    public void addWeapon(Weapon.weaponEnums weapon) {
         Holding.add(weapon);
     }
 
-    public void removeWeapon(Weapon.WEAPONS weapon) {
+    public void removeWeapon(String weapon) {
         Holding.remove(weapon);
     }
 
@@ -52,7 +54,7 @@ public class Weapon {
         return Holding.size();
     }
 
-    public Weapon.WEAPONS getWeaponAtPosition(int pos) {
+    public Weapon.weaponEnums getWeaponAtPosition(int pos) {
         return Holding.get(pos);
     }
 
@@ -63,9 +65,11 @@ public class Weapon {
     public String getWeaponNameString() {
         return weaponSpecialities.getWeaponName();
     }
-    public int getWeaponDamage(){
+
+    public int getWeaponDamage() {
         return weaponSpecialities.getWeaponDamage();
     }
+
 
     public String getWeaponDescription(String weapon) {
         String tempDescription = "";

@@ -30,7 +30,7 @@ public class driver {
     }
 
     private static void printEnemyStats() {
-        System.out.println("Enemy " + "\nhp: " + enemyhp + "\ndmg: " + enemymeleedmg + "\n");
+        System.out.println("NewRPGAttempt/Enemy " + "\nhp: " + enemyhp + "\ndmg: " + enemymeleedmg + "\n");
     }
 
     private static void buildWarrior() {
