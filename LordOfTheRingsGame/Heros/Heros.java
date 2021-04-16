@@ -7,9 +7,8 @@ import java.util.ArrayList;
 public class Heros {
 //    public enum HerosNameEnum {ARAGORN, ELROND, LEGOLAS, GIMLI, FRODO, GALADRIEL, MITHRANDIR, GANDALF_THE_GRAY}
 
-    public static final int LENGTH = 11;
     private Weapon grabbedWeapon = new Weapon();
-    public static ArrayList<Weapon> takenWeapon= new ArrayList<>();
+//    public static ArrayList<Weapon> takenWeapon= new ArrayList<>();
     public static HerosSpecialities heroList;
 
 
@@ -46,20 +45,9 @@ public class Heros {
         grabbedWeapon.addWeapon(weapon);
     }
 
-    public void handOverWeapon(Weapon.WEAPONS weapon) {
-        grabbedWeapon.removeWeapon(weapon);
-    }
+    public void handOverWeapon(Weapon.WEAPONS weapon) {        grabbedWeapon.removeWeapon(weapon);    }
 
-    public String getPlayerNameString() {return heroList.getHeroName();
-    }
-
-//    public static void getPlayerName() {
-//        System.out.println("Your hero's name is " + heroList.getHeroName());
-//    }
-
-//    public static void getPlayerDamage() {
-//        System.out.println("Your hero's damage is : " + heroList.getMakeDamage());
-//    }
+    public String getPlayerNameString() {return heroList.getHeroName();    }
 
     public int getPlayerDamageInt() {
         return heroList.getMakeDamage();
@@ -70,8 +58,7 @@ public class Heros {
     }
 
     public static void getPlayerMaxPower() {
-        System.out.println("Your hero's max power is : " + heroList.getMaxPower());
-    }
+        System.out.println("Your hero's max power is : " + heroList.getMaxPower());    }
 
     public void setPlayerPower(int newPower){
         heroList.setPower(newPower);

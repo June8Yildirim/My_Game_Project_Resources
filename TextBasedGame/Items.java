@@ -3,9 +3,7 @@ package TextBasedGame;
 import java.util.ArrayList;
 
 public class Items {
-    enum Item {
-        BOOK, KNIFE, CUP, PHONE, TV
-    }
+    enum Item {BOOK, KNIFE, CUP, PHONE, TV}
 
     private ArrayList<Item> Holds = new ArrayList<Item>();
 
