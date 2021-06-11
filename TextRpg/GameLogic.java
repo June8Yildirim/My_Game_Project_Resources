@@ -21,7 +21,7 @@ public class GameLogic {
     public static int readInt(String prompt, int userChoice) {
         int input;
         do {
-            System.out.println(prompt);
+            System.out.print(prompt);
             try {
                 input = Integer.parseInt(sc.next());
             } catch (Exception e) {
@@ -407,7 +407,7 @@ public class GameLogic {
     public static void gameLoop() {
         while (isRunning) {
             printMenu();
-            int input = readInt("-> ", 3);
+            int input = readInt("-> ", 2);
             if (input == 1) {
                 continueJourney();
             } else if (input == 2) {

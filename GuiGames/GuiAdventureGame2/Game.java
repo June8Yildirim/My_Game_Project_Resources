@@ -1,4 +1,4 @@
-package GuiAdventureGame;
+package GuiGames.GuiAdventureGame2;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,7 +9,7 @@ import java.util.Random;
 public class Game {
     JFrame window;
     Container container;
-    JPanel titleNamePanel, startButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel;
+    JPanel titleNamePanel, startButtonPanel, mainTextPanel, choiceButtonPanel, playerPanel, picturePanel;
     JLabel titleNameLabel, hpLevel, hpLabelNumber, weaponLabel, weaponLabelName;
     Font titleFont = new Font("Verdana", Font.BOLD, 40);
     Font normalText = new Font("Verdana", Font.PLAIN, 20);
